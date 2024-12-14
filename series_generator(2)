@@ -1,0 +1,21 @@
+def generate_series(a):
+    if a % 2 == 0:  
+        a -= 1  
+
+    number = 1 
+    series = []  
+
+    for _ in range(a):  
+        series.append(number) 
+        number += 2
+
+    return series
+
+a = int(input("Enter a positive integer: "))
+
+if a > 0:
+    result = generate_series(a)
+    for num in result:
+        print(num, end=", "if num != result[-1] else "")
+else:
+    print("Error: Please enter a positive integer.")
